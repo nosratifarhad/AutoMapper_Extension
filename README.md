@@ -1,7 +1,8 @@
 # AutoMapper Extension
 
 ### how to use ?
-### you can user this extension in usiness layer . i use in api for sample
+### you can user this extension in business layers .
+#### i use in api for sample.
 
 ```csharp
 [HttpGet("todbmodel")]
