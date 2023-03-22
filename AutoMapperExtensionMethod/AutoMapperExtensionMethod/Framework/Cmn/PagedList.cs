@@ -90,11 +90,6 @@
             this.DataList.AddRange(source);
         }
 
-        //public int PageIndex { get; private set; }
-        //public int PageSize { get; private set; }
-        //public int TotalCount { get; private set; }
-        //public int TotalPages { get; private set; }
-
         public List<T> DataList { get; set; }
         public int PageIndex { get; set; }
         public int PageSize { get; set; }

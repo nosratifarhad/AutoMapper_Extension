@@ -1,6 +1,6 @@
 namespace AutoMapperExtensionMethod.Dtos
 {
-    public class WeatherForecastVM
+    public class WeatherForecastDto
     {
         public DateTime Date { get; set; }
 
