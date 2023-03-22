@@ -7,7 +7,7 @@
  [HttpGet("todbmodel")]
  public WeatherForecastDto ToDBModel()
  {
-     WeatherForecastVM weatherForecastVM = new WeatherForecastVM();//get from repo
+     WeatherForecastVM weatherForecastVM = new WeatherForecastVM();//get result from repository
 
      return weatherForecastVM.ToDBModel();
  }
@@ -15,7 +15,7 @@
  [HttpGet("tobusinessobject")]
 public WeatherForecastVM ToBusinessObject()
 {
-    WeatherForecastDto weatherForecastDto = new WeatherForecastDto();
+    WeatherForecastDto weatherForecastDto = new WeatherForecastDto();//get result from repository
 
     return weatherForecastDto.ToBusinessObject();
 }
@@ -24,7 +24,7 @@ public WeatherForecastVM ToBusinessObject()
 public WeatherForecastVM Get_WeatherForecastVM_To_WeatherForecastDto()
 {
     WeatherForecastVM weatherForecastVM = new WeatherForecastVM();
-    WeatherForecastDto weatherForecastDto = new WeatherForecastDto();
+    WeatherForecastDto weatherForecastDto = new WeatherForecastDto();//get result from repository
 
     return weatherForecastDto.ToBusinessObject(weatherForecastVM);
 }
@@ -32,7 +32,7 @@ public WeatherForecastVM Get_WeatherForecastVM_To_WeatherForecastDto()
 [HttpGet("tobusinessobjectlist")]
 public IEnumerable<WeatherForecastVM> Get_WeatherForecastDtoList()
 {
-    List<WeatherForecastDto> weatherForecastDtos = new List<WeatherForecastDto>();
+    List<WeatherForecastDto> weatherForecastDtos = new List<WeatherForecastDto>();//get result from repository
 
     return weatherForecastDtos.ToBusinessObjectList();
 }
@@ -40,7 +40,7 @@ public IEnumerable<WeatherForecastVM> Get_WeatherForecastDtoList()
 [HttpGet("tobusinessobjectpagedlist")]
 public IPagedList<WeatherForecastVM> Get_IPagedList_WeatherForecastDtoList()
 {
-    IEnumerable<WeatherForecastDto> weatherForecastDtos = new List<WeatherForecastDto>();
+    IEnumerable<WeatherForecastDto> weatherForecastDtos = new List<WeatherForecastDto>();//get result from repository
 
     return new PagedList<WeatherForecastDto>(weatherForecastDtos, pageIndex: 0, pageSize: 0).ToBusinessObjectPagedList();
 }
