@@ -4,14 +4,14 @@
 ### you can user this extension in usiness layer . i use in api for sample
 
 ```csharp
- [HttpGet("todbmodel")]
- public WeatherForecastDto ToDBModel()
- {
-     WeatherForecastVM weatherForecastVM = new WeatherForecastVM();//get result from repository
+[HttpGet("todbmodel")]
+public WeatherForecastDto ToDBModel()
+{
+    WeatherForecastVM weatherForecastVM = new WeatherForecastVM();//get result from repository
 
-     return weatherForecastVM.ToDBModel();
- }
- 
+    return weatherForecastVM.ToDBModel();
+}
+
  [HttpGet("tobusinessobject")]
 public WeatherForecastVM ToBusinessObject()
 {
