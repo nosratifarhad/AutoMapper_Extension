@@ -48,7 +48,7 @@ public IPagedList<WeatherForecastVM> Get_IPagedList_WeatherForecastDtoList()
 ```
 
 ### actually your call this methods . 
-### if do you not want to AutoMapper !!! you can map manual entitys .
+### if do you not want to use "AutoMapper" ! you can map manual entitys .
 
 ```csharp
 public static WeatherForecastDto ToDBModel(this WeatherForecastVM businessObject)
