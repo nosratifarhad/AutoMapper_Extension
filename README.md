@@ -1,9 +1,54 @@
-# AutoMapper_Extension
+# AutoMapper Extension
 
-## 
+### how to use ?
+### you can user this extension in usiness layer . i use in api for sample
 
 ```csharp
- public static WeatherForecastDto ToDBModel(this WeatherForecastVM businessObject)
+ [HttpGet("todbmodel")]
+ public WeatherForecastDto ToDBModel()
+ {
+     WeatherForecastVM weatherForecastVM = new WeatherForecastVM();//get from repo
+
+     return weatherForecastVM.ToDBModel();
+ }
+ 
+ [HttpGet("tobusinessobject")]
+public WeatherForecastVM ToBusinessObject()
+{
+    WeatherForecastDto weatherForecastDto = new WeatherForecastDto();
+
+    return weatherForecastDto.ToBusinessObject();
+}
+
+[HttpGet("tobusinessobject-tow")]
+public WeatherForecastVM Get_WeatherForecastVM_To_WeatherForecastDto()
+{
+    WeatherForecastVM weatherForecastVM = new WeatherForecastVM();
+    WeatherForecastDto weatherForecastDto = new WeatherForecastDto();
+
+    return weatherForecastDto.ToBusinessObject(weatherForecastVM);
+}
+
+[HttpGet("tobusinessobjectlist")]
+public IEnumerable<WeatherForecastVM> Get_WeatherForecastDtoList()
+{
+    List<WeatherForecastDto> weatherForecastDtos = new List<WeatherForecastDto>();
+
+    return weatherForecastDtos.ToBusinessObjectList();
+}
+
+[HttpGet("tobusinessobjectpagedlist")]
+public IPagedList<WeatherForecastVM> Get_IPagedList_WeatherForecastDtoList()
+{
+    IEnumerable<WeatherForecastDto> weatherForecastDtos = new List<WeatherForecastDto>();
+
+    return new PagedList<WeatherForecastDto>(weatherForecastDtos, pageIndex: 0, pageSize: 0).ToBusinessObjectPagedList();
+}
+```
+### 
+
+```csharp
+public static WeatherForecastDto ToDBModel(this WeatherForecastVM businessObject)
 {
     return businessObject.MapTo<WeatherForecastVM, WeatherForecastDto>();
 }
