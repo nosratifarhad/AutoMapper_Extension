@@ -87,7 +87,7 @@ public static IPagedList<WeatherForecastVM> ToBusinessObjectPagedList(this Paged
 ```
 ### if do you not want to use "AutoMapper" ! you can map manual entitys .
 
-```cahrp
+```csharp
 public static WeatherForecastDto ToDBModel(this WeatherForecastVM businessObject)
     => new WeatherForecastDto()
     {
