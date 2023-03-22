@@ -85,7 +85,7 @@ public static IPagedList<WeatherForecastVM> ToBusinessObjectPagedList(this Paged
 }
 
 ```
-### if do you not want to use "AutoMapper" ! you can map manual entitys .
+### if do you not want to use "AutoMapper" ! you can map manual entitys . like this
 
 ```csharp
 
